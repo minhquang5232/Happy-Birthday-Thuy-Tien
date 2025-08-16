@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Happy birthday</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="boxcontainer">
+				<div class="image">
+					<img src="flag.png" alt="" />
+				</div>
+				<div class="text-happybirthday">
+					<img src="texthappy.png" alt="" />
+				</div>
+				<div class="cake">
+					<img src="cake.png" alt="" />
+				</div>
+				<div class="box-balloon">
+					<div class="balloon-item1">
+						<img src="balloon.png" alt="" />
+					</div>
+					<div class="balloon-item1">
+						<img src="balloon.png" alt="" />
+					</div>
+				</div>
+				<div class="box-cloud">
+					<div class="cloud">
+						<img src="cloud.png" alt="" />
+					</div>
+					<div class="cloud">
+						<img src="cloud.png" alt="" />
+					</div>
+				</div>
+				<div class="box-firework">
+					<div class="firework">
+						<img src="firework.png" alt="" />
+						<img src="firework1.png" alt="" id="firework1" />
+					</div>
+					<div class="firework">
+						<img src="firework.png" alt="" />
+						<img src="firework1.png" alt="" id="firework1" />
+					</div>
+				</div>
+				<div class="paperCannons">
+					<img src="paperCannons1.png" alt="" />
+				</div>
+				<!-- <div class="box-giftbox">
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+					<img src="giftbox.png" alt="" />
+				</div> -->
+				<div class="mail">
+					<i class="fa-regular fa-envelope"></i>
+				</div>
+				<!-- <div class="boxcute">
+					<div class="cute1">
+						<img src="cute.png" alt="" />
+					</div>
+					<div class="cute2">
+						<img src="cute.png" alt="" />
+					</div>
+				</div> -->
+			</div>
+			<div class="boxMail">
+				<i class="fa-solid fa-xmark"></i>
+				<div class="boxMail-container">
+					<div class="card1">
+						<div class="userImg">
+							<img src="Picture4.jpg" alt="" />
+						</div>
+						<h3>Happy birthday</h3>
+						<div class="imageCute">
+							<img src="cute1.png" alt="" />
+						</div>
+					</div>
+					<div class="card2">
+						<div class="card2-content">
+							<h3>Gửi Tiên!</h3>
+							<h2>
+								Hôm nay là một ngày đặc biệt của một người đặc biệt nên tui muốn
+								dành một món quà bất ngờ này cho người đó. Chúc bạn có một ngày
+								sinh nhật thật là vui vẻ, ý nghĩa, hạnh phúc. Chúc bạn có thêm
+								tuổi mới lun lun vui vẻ, càng ngày càng vui vẻ và chinh chinh đẹp 
+								nha và luôn mặt luôn tươi như hoa không cần tưới nha. Chúc bạn luôn
+								khỏe mạnh và nhớ giữ gìn sức khỏe nha. Mong sắp tới à không phải là
+								chắc chắn sang năm mới mình cố gắng gặp nhau nha, tôi cũng muốn được
+								đi chơi cùng bạn, đi ăn cùng bạn, chụp hình cùng,...Hahaha. Sao thấy ghê
+								chưa năm nay khác biệt hơn mọi năm chưa, này tui làm mấy tuần nay cùng với
+								1 người bạn hỗ trợ và chỉ dẫn tui làm cái này á mong bạn sẽ thích nó. 
+								Cuối cùng chúc bạn người đặc biệt có ngày sinh nhật vui vẻ nhoaaaa. 
+								Chúc mọi điều tốt đẹp nhất luôn tới với bạn nhaaaaaaa. HAPPY BIRTHDAY ^^				
+							</h2>
+							<div class="imageCute2">
+								<img src="cute2.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		document.addEventListener('mousemove', function (e) {
+			let body = document.querySelector('body');
+			let heart = document.createElement('span');
+			let x = e.offsetX;
+			let y = e.offsetY;
+			heart.style.left = x + 'px';
+			heart.style.top = y + 'px';
+
+			let size = Math.random() * 10;
+			heart.style.width = 4 * size + 'px';
+			heart.style.height = 4 * size + 'px';
+
+			let transformValue = Math.random() * 360;
+			heart.style.transform = 'rotate(' + transformValue + 'deg)';
+
+			body.appendChild(heart);
+
+			setTimeout(function () {
+				heart.remove();
+			}, 1000);
+		});
+
+		let mailBox = document.querySelector('.mail');
+		let boxmail = document.querySelector('.boxMail');
+		var close = document.querySelector('.fa-xmark');
+		mailBox.onclick = function () {
+			mailBox.classList.toggle('active');
+			boxmail.classList.add('active');
+		};
+
+		close.addEventListener('click', function () {
+			boxmail.classList.remove('active');
+		});
+	</script>
+</html>
