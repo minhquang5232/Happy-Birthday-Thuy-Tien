@@ -413,7 +413,7 @@ body{
 }
 .container .cloud:first-child::before{
     position: absolute;
-    content: 'Bấm vào thư đi nè';
+    content: 'Bấm đọc liền đee';
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
@@ -424,7 +424,7 @@ body{
 }
 .container .cloud:last-child::before{
     position: absolute;
-    content: 'Chào Tiên Cute';
+    content: 'Có 1 tin nhắn nhỡ';
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
